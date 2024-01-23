@@ -16,7 +16,7 @@
 >## training score, test score, mean cross validation score ปัจจุบันมีค่าเท่าไหร่
 > mean cross validation score โดยเฉลี่ยอยู่ที่ 0.83 - 0.85
 > training score โดยเฉลี่ยอยู่ที่ 0.83-0.85
-> test score โดยเฉลี่ยอยู่ที่ 0.80-0.86
+> test score โดยเฉลี่ยอยู่ที่ 0.80-0.84
 
 >## ใช้ baseline และ วิธีการประเมินอะไรได้บ้าง อย่างไร
 >เนื่องจาก project ของพวกเราเป็นแบบ classification จึงมีการใช้ baseline แบบ mostfrequent, prior, stratified, uniform
