@@ -15,11 +15,11 @@
 
 >## training score, test score, mean cross validation score ปัจจุบันมีค่าเท่าไหร่
 > mean cross validation score โดยเฉลี่ยอยู่ที่ 0.83 - 0.85
-> training score 
-> test score
+> training score โดยเฉลี่ยอยู่ที่ 0.83-0.85
+> test score โดยเฉลี่ยอยู่ที่ 0.80-0.86
 
 >## ใช้ baseline และ วิธีการประเมินอะไรได้บ้าง อย่างไร
->ใช้ baseline แบบ mostfrequent, prior, stratified, uniform
+>เนื่องจาก project ของพวกเราเป็นแบบ classification จึงมีการใช้ baseline แบบ mostfrequent, prior, stratified, uniform
 
 >## จากการทดลองเบื้องต้น สามารถนำโมเดลไปใช้งานจริงได้แล้วหรือไม่ เพราะเหตุใด
 > คิดว่าจากการได้เห็นประสิทธิภาพของการ train model และนำไปทดสอบแล้วได้ค่าประสิทธิภาพ accuracy ประมาณ 0.83 ซึ่งถ้าเราเทียบกับ baseline แล้วที่ score อยู่ที่ประมาณ 0.5 - 0.7 ซึ่งจากผลลัพธ์ตรงนี้ก็คิดว่าสามารถนำไปใช้งานจริงได้แล้ว
