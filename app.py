@@ -5,7 +5,7 @@ import joblib
 
 # "Artifacts"
 pipeline = joblib.load("pipeline.joblib")
-# label_pipeline = joblib.load("label_pipeline.joblib")
+label_pipeline = joblib.load("label_pipeline.joblib")
 departments_list = joblib.load("departments.joblib")
 salary_list = joblib.load("salary.joblib")
 boolean_dict = {'Yes':1,'No':0}
@@ -24,6 +24,7 @@ def predict(department, promoted, review, projects, salary, tenure, satisfaction
     sample['avg_hrs_month'] = avg_hrs_month
 
     left = pipeline.predict(pd.DataFrame([sample]))
+    print(left)
     return left
 
 # https://www.gradio.app/guides
@@ -37,13 +38,14 @@ with gr.Blocks() as blocks:
     satisfaction = gr.Number(label="Satisfaciton", value=0.0, minimum=0.0, maximum= 1.0,step=0.1,info="range(0-1)")
     bonus = gr.Radio(['Yes','No'],label = "bonus",info = "is they get bonus?")
     avg_hrs_month = gr.Number(label="Average hours/month", minimum=0)
+    predict_btn = gr.Button("Predict")
     left = gr.Text(label="left")
 
     inputs = [department, promoted, review, projects, salary, tenure, satisfaction, bonus, avg_hrs_month]
     outputs = left
 
-    predict_btn = gr.Button("Predict")
     predict_btn.click(predict, inputs=inputs, outputs=outputs)
+    print(outputs)
 
     
 
