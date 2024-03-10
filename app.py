@@ -35,7 +35,7 @@ with gr.Blocks() as blocks:
     projects = gr.Number(label="Projects", value=1, minimum=0, step=1)
     salary = gr.Dropdown(salary_list, value=salary_list[0], label="salary")
     tenure = gr.Number(label="Tenure", value=1, minimum=0)
-    satisfaction = gr.Number(label="Satisfaciton", value=0.0, minimum=0.0, maximum= 1.0,step=0.1,info="range(0-1)")
+    satisfaction = gr.Number(label="Satisfaction", value=0.0, minimum=0.0, maximum= 1.0,step=0.1,info="range(0-1)")
     bonus = gr.Radio(['Yes','No'],label = "bonus",info = "is they get bonus?")
     avg_hrs_month = gr.Number(label="Average hours/month", minimum=0)
     predict_btn = gr.Button("Predict")
